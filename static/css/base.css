@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none !important;
+      color: inherit;
+}
+
+.logo {
+    color: #fafafa;
+    font-family: 'Lobster', sans-serif;
+}
