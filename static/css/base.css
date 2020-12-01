@@ -56,6 +56,10 @@ i {
     transform: scale(1.05);
 }
 
+.img-fluid {
+    height: 400px;
+}
+
 /*------------- product_detail.html --------------- */
 
 .product_detail_area {
