@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid heading-area">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="text-white">Product Details</h2>
+                <hr class="w-50 mb-1 divider">
+            </div>
+        </div>
+    </div>
+    <div class="container product-detail-area">
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12" id="samples">
+                <img id="zoom1" height="300px" width="150px" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="{{ product.image.url }}">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <p class="mb-0"><h4 class="text-white">{{ product.name }}</h4></p>
+                    <p class="mb-0 text-left text-white"><strong>Price:</strong> ${{ product.price }}</p>
+                    <a>
+                        <p class="text-white mt-3">Add to Wishlist <i class="fas fa-heart"></i></p>
+                    </a>
+                    {% if product.rating %}
+                        <p class="text-white"><strong>Rating:</strong> <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
+                    {% else %}
+                        <p class="text-white">No Rating</p>
+                    {% endif %}
+                    <h6 class="text-white mt-3"><strong>Description: </strong></h6>
+                    <p class="text-white">{{ product.description }}</p>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-9 col-sm-9 col-xs-12">
+                <div id="preview" onmousemove="zoomIn(event)"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function zoomIn(event) {
+            var pre = document.getElementById("preview");
+            pre.style.visibility = "visible";
+            if ($('#zoom1').is(':hover')) {
+                var img = document.getElementById("zoom1");
+                pre.style.backgroundImage = "url('{{ product.image_big.url }}')";
+                }
+            var posX = event.offsetX;
+            var posY = event.offsetY;
+            pre.style.backgroundPosition=(-posX*0.5)+"px "+(-posY*0.5)+"px";
+
+            }
+
+        function zoomOut() {
+            var pre = document.getElementById("preview");
+            pre.style.visibility = "hidden";
+            }
+    </script>
+{% endblock %}
