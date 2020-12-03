@@ -5,10 +5,10 @@
                 Wetsuits
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wetsuits">
-                <a href="" class="dropdown-item">Mens Wetsuits</a>
-                <a href="" class="dropdown-item ">Womens Wetsuits</a>
-                <a href="" class="dropdown-item ">Kids Wetsuits</a>
-                <a href="" class="dropdown-item">Wetsuit Boots</a>
+                <a href="{% url 'products' %}?category=mens_wetsuits" class="dropdown-item">Mens Wetsuits</a>
+                <a href="{% url 'products' %}?category=womens_wetsuits" class="dropdown-item ">Womens Wetsuits</a>
+                <a href="{% url 'products' %}?category=kids_wetsuits" class="dropdown-item ">Kids Wetsuits</a>
+                <a href="{% url 'products' %}?category=wetsuit_boots" class="dropdown-item">Wetsuit Boots</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -16,10 +16,10 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment">
-                <a href="" class="dropdown-item">Surfboards</a>
-                <a href="" class="dropdown-item">Kayaks</a>
-                <a href="" class="dropdown-item">Wakeboards</a>
-                <a href="" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=surfboard" class="dropdown-item">Surfboards</a>
+                <a href="{% url 'products' %}?category=kayaks" class="dropdown-item">Kayaks</a>
+                <a href="{% url 'products' %}?category=wakeboards" class="dropdown-item">Wakeboards</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
             </div>
         </li>
 
@@ -28,10 +28,10 @@
                 Shore Wear
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shore-wear">
-                <a href="" class="dropdown-item">Mens Clothing</a>
-                <a href="" class="dropdown-item">Womens Clothing</a>
-                <a href="" class="dropdown-item">Kids Clothing</a>
-                <a href="" class="dropdown-item">Footwear</a>
+                <a href="{% url 'products' %}?category=Mens_clothing" class="dropdown-item">Mens Clothing</a>
+                <a href="{% url 'products' %}?category=womens_clothing" class="dropdown-item">Womens Clothing</a>
+                <a href="{% url 'products' %}?category=kids_clothing" class="dropdown-item">Kids Clothing</a>
+                <a href="{% url 'products' %}?category=footwear" class="dropdown-item">Footwear</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories">
-                <a href="" class="dropdown-item">Footwear</a>
-                <a href="" class="dropdown-item">Safety and Protection</a>
-                <a href="" class="dropdown-item">Transport</a>
-                <a href="" class="dropdown-item">Care and Repair</a>
+                <a href="{% url 'products' %}?category=footwear" class="dropdown-item">Footwear</a>
+                <a href="{% url 'products' %}?category=safety_and_protection" class="dropdown-item">Safety and Protection</a>
+                <a href="{% url 'products' %}?category=transport" class="dropdown-item">Transport</a>
+                <a href="{% url 'products' %}?category=care_and_repair" class="dropdown-item">Care and Repair</a>
             </div>
         </li>
     </ul>

@@ -19,26 +19,74 @@
         </div>
     </div>
     <div class="container product-detail-area">
-        <div class="row">
-            <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12" id="samples">
+        <div class="row mt-4">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="samples">
                 <img id="zoom1" height="300px" width="150px" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="{{ product.image.url }}">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0"><h4 class="text-white">{{ product.name }}</h4></p>
-                    <p class="mb-0 text-left text-white"><strong>Price:</strong> ${{ product.price }}</p>
-                    <a>
-                        <p class="text-white mt-3">Add to Wishlist <i class="fas fa-heart"></i></p>
-                    </a>
-                    {% if product.rating %}
-                        <p class="text-white"><strong>Rating:</strong> <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
-                    {% else %}
-                        <p class="text-white">No Rating</p>
-                    {% endif %}
-                    <h6 class="text-white mt-3"><strong>Description: </strong></h6>
-                    <p class="text-white">{{ product.description }}</p>
-                </div>
             </div>
-            <div class="col-lg-8 col-md-9 col-sm-9 col-xs-12">
-                <div id="preview" onmousemove="zoomIn(event)"></div>
+            <div class="col-lg-3 col-md-3">
+                <img id="preview" onmousemove="zoomIn(event)">
+            </div>
+            <div class="col-lg-6 product-details-container mb-5">
+                <p class="mb-0"><h4 class="text-white">{{ product.name }}</h4></p>
+                <p class="mb-0 text-left text-white"><strong>Price:</strong> ${{ product.price }}</p>
+                <a>
+                    <p class="text-white mt-3">Add to Wishlist <i class="fas fa-heart"></i></p>
+                </a>
+                {% if product.rating %}
+                    <p class="text-white"><strong>Rating:</strong> <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
+                {% else %}
+                    <p class="text-white">No Rating</p>
+                {% endif %}
+                <h6 class="text-white mt-3"><strong>Description: </strong></h6>
+                <p class="text-white">{{ product.description }}</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header size-chart" data-toggle="collapse" id="headingOne" aria-controls="collapseOne" data-target="#collapseOne" aria-expanded="true">
+                            <h5 class="mb-0 d-flex justify-content-center">
+                                <button class="btn btn-link text-white"  aria-expanded="true">
+                                Mens Wetsuits Size Chart
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body d-flex justify-content-center  size-chart">
+                                <img src="/media/Mens-Wetsuit-SizeChart_1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header size-chart" data-toggle="collapse" id="headingTwo" aria-controls="collapseTwo" data-target="#collapseTwo" aria-expanded="true">
+                            <h5 class="mb-0 d-flex justify-content-center">
+                                <button class="btn btn-link text-white"  aria-expanded="true">
+                                Womens Wetsuit Size Chart
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body d-flex justify-content-center  size-chart">
+                                <img src="/media/oneill-womens-wetsuit-size-chart.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header size-chart" data-toggle="collapse" id="headingThree" aria-controls="collapseThree" data-target="#collapseThree" aria-expanded="true">
+                            <h5 class="mb-0 d-flex justify-content-center">
+                                <button class="btn btn-link text-white"  aria-expanded="true">
+                                Kid's Wetsuit Size Chart
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body d-flex justify-content-center  size-chart">
+                                <img src="/media/kids-wetsuit-chart.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,7 +100,7 @@
                 }
             var posX = event.offsetX;
             var posY = event.offsetY;
-            pre.style.backgroundPosition=(-posX*0.5)+"px "+(-posY*0.5)+"px";
+            pre.style.backgroundPosition=(-posX*1.0)+"px "+(-posY*1.5)+"px";
 
             }
 
