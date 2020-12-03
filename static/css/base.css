@@ -11,7 +11,7 @@ a, a:hover, a:focus, a:active {
       text-decoration: none !important;
 }
 
-i {
+.white-icon {
     color: #fafafa;
 }
 
@@ -68,6 +68,10 @@ i {
 
 .product_detail_area {
     width: 80%;
+}
+
+.category {
+    color: #fafafa;
 }
 
 #preview{

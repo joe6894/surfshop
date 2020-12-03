@@ -32,6 +32,13 @@
                 <a>
                     <p class="text-white mt-3">Add to Wishlist <i class="fas fa-heart"></i></p>
                 </a>
+                {% if product.category %}
+                <p class="mt-1 mb-0y">
+                    <a class="category" href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1 text-white"></i>{{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
                 {% if product.rating %}
                     <p class="text-white"><strong>Rating:</strong> <i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
                 {% else %}
