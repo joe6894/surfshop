@@ -48,6 +48,7 @@
                 <p class="text-white">{{ product.description }}</p>
             </div>
         </div>
+        {% if product.category == 'mens_wetsuits' or product.category == 'womens_wetsuits' or product.category == 'kids_wetsuits' %}
         <div class="row mt-5">
             <div class="col-12">
                 <div id="accordion">
@@ -96,6 +97,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
     <script>
         function zoomIn(event) {
