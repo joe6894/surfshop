@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" />
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"></script>
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -11,6 +19,38 @@
 
 {% block content %}
     <div class="hero-image-area">
-        <img src="/media/surfing-background-image.jpg" class="hero-image">
+        <img src="/media/surfing-background-image.jpg" class="hero-image mb-5">
     </div>
+    <section class="container-fluid top-brands">
+        <div class="row text-center">
+            <div class="col-12 heading-home-area">
+                <h2 class="text-white heading-home mb-5">View Products from our top brands</h2>
+            </div>
+        </div>
+        <div class="container-fluid row brand-area">
+            <div class="col-lg-3 col-md-6">
+                <img src="/media/billabong.jpg" class="brand-img mb-4" alt="">
+                <a href="" class="brand-btn text-white mb-4">View Products</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <img src="/media/animal.jpg" class="brand-img mb-4" alt="">
+                <a href="" class="brand-btn text-white mb-4">View Products</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <img src="/media/o'neill.jpg" class="brand-img mb-4" alt="">
+                <a href="" class="brand-btn text-white mb-4">View Products</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <img src="/media/gul.jpg" class="brand-img mb-4" alt="">
+                <a href="" class="brand-btn text-white mb-4">View Products</a>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="images/parallax1.jpg">
+            </div>
+        </div>
+    </section>
 {% endblock %}
