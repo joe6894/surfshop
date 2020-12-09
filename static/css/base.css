@@ -35,6 +35,20 @@ a, a:hover, a:focus, a:active {
     border-bottom: solid 1px #fafafa;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 /*------------- index.html --------------- */
 
 .hero-image-area {
