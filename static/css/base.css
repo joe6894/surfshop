@@ -147,7 +147,9 @@ a, a:hover, a:focus, a:active {
     color: white !important;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -179,3 +181,5 @@ a, a:hover, a:focus, a:active {
 .size-chart {
     background-color: #111111;
 }
+
+/*------------- bag.html --------------- */
