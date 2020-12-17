@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #111111;
+    background-color: #0AA3CF;
     font-family: 'Oswald';
 }
 
@@ -26,7 +26,7 @@ body {
 
 .hero-image {
     width: 100%;
-    height: calc(100vh - 164px);
+    height: calc(90vh - 164px);
 }
 
 .shop-now-area {
@@ -56,6 +56,29 @@ body {
 
 .img-fluid {
     height: 40vh;
+}
+
+.parallax {
+  background-image: url("/media/kayaking-safety.jpg");
+  min-height: 80vh; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.safety-area {
+    margin: 0;
+    padding: 0;
+}
+
+.safety-btn-area {
+    width: 20vw;
+    background-color: #111111;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border: solid 1px #fafafa;
 }
 
 .btn-black {

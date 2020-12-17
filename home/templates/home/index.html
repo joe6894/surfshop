@@ -1,24 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" />
-{% endblock %}
-
-{% block extra_js %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"></script>
-{% endblock %}
-
-{% block page_header %}
-{% endblock %}
-
 {% block content %}
     <section class="heading-padding">
         <div class="row hero-image-area">
             <div class="col-12 hero-image-area">
                 <img src="/media/surfing-background-image.jpg" class="hero-image" alt="hero-image">
                 <div class="shop-now-area">
-                    <h1>View all our Products</h1>
+                    <h1 class="text-center">View all our Products</h1>
                     <h4 class="shop-now-btn-area">
                         <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-3 text-uppercase">Shop Now</a>
                     </h4>
@@ -29,7 +18,7 @@
     <section class="container-fluid best-selling pt-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-white text-center">Best Selling Products</h2>
+                <h2 class="text-white text-center border-bottom">Best Selling Products</h2>
             </div>
         </div>
         <div class="row">
@@ -76,6 +65,20 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    </section>
+    <section class="pt-5">
+        <div class="row safety-area">
+            <div class="col-12 safety-area">
+                <div class="parallax">
+                    <div class="safety-btn-area p-3">
+                        <h3 class="text-white text-center safety-heading">Protect Your family with the latest Lifejackets and Helmets</h3>
+                        <h4 class="shop-now-btn-area">
+                            <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-3 text-uppercase">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}
