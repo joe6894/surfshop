@@ -16,7 +16,7 @@ body {
 }
 
 .heading-padding {
-    padding-top: 164px;
+    padding-top: 166px;
 }
 
 .footer {
@@ -350,6 +350,19 @@ input[name='q']::placeholder {
 }
 
 /* ------------ Media Queries ---------- */
+
+
+@media only screen and (max-width: 1200px) {
+    .top-brands {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .top-brands {
+        width: 100vw;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .heading-padding {
