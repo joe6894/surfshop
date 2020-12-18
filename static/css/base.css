@@ -193,6 +193,10 @@ body {
 	box-shadow: 2px 2px 7px 2px rgba(130,130,130,.7),-2px -2px 7px 2px rgba(130,130,130,1);
 }
 
+.bag-heading {
+    padding-top: 166px;
+}
+
 .size-chart {
     background-color: #111111;
 }
@@ -424,7 +428,7 @@ input[name='q']::placeholder {
 
     .products-heading-padding {
         padding-top: 117px;
-}
+    }
 
     .safety-btn-area {
         width: 100vw;
@@ -444,6 +448,10 @@ input[name='q']::placeholder {
         right: 0;
         left: 0;
         border: solid 1px #fafafa;
+    }
+
+    .bag-heading {
+        padding-top: 117px;
     }
 }
 
@@ -479,6 +487,10 @@ input[name='q']::placeholder {
 
 @media only screen and (max-width: 414px) {
     .products-heading-padding {
+        padding-top: 145px;
+    }
+
+    .bag-heading {
         padding-top: 145px;
     }
 }
