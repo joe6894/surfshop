@@ -9,8 +9,6 @@ def index(request):
     products = Product.objects.filter(category=17)
     billabong = Product.objects.filter(brand='Billabong')
 
-    print(billabong)
-
     context = {
         'products': products,
         'billabong': billabong,
