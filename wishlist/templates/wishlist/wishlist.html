@@ -10,8 +10,8 @@
             </div>
         </div>
     </div>
-    {% if item in wishlist%}
-        <div class="col-12">
+    {% if wishlist %}
+        <div class="col-12 container">
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
@@ -27,7 +27,7 @@
                         {% for item in wishlist %}
                             <tr>
                                 <td>
-                                    <img src="{{ item.image.url }}">
+                                    <img class="img-fluid" src="{{ item.image.url }}">
                                 </td>
                                 <td>
                                     <p class="text-white">{{ item.name }}</p>
@@ -42,13 +42,16 @@
                     </tbody>
                 </table>
             </div>
-        </div> 
-    {% endif %}
-        <p class="lead text-white m-5">Your Wishlist is empty.</p>
-        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg m-5">
-            <span class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Keep Browsing</span>
-        </a>
+        </div>
+        {% else %}
+        <div class="container">
+            <p class="text-white m-3">Your Wishlist is empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg m-3">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Browsing</span>
+            </a>
+        </div>
+        {% endif %}
 {% endblock %}
