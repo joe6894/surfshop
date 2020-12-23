@@ -8,9 +8,12 @@
                 <h2 class="bag-heading text-white border-bottom text-center mt-4 mb-4">Contact Us</h2>
             </div>
         </div>
-        <form role="form" action="" method="POST">
+        <form action="{% url 'contact' %}" method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="form-group">
+                {{ form|crispy }}
+            </div>
+            <input type="submit" value="submit" class="contact-btn p-2">
         </form>
     </div>
 {% endblock %}

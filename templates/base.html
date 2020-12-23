@@ -128,16 +128,16 @@
                     <h3 class="text-white text-center">Useful Links</h3>
                     <ul class="">
                         <li class="useful-link text-center">
-                            <a class="text-white">Contact</a>
+                            <a href="{% url 'contact' %}" class="text-white">Contact</a>
                         </li>
                         <li class="useful-link text-center">
-                            <a class="text-white text-center">Sign In</a>
+                            <a href="{% url 'products' %}?category=wakeboards,kayaks,surfboard" class="text-white text-center">Equipment</a>
                         </li>
                         <li class="useful-link text-center">
-                            <a class="text-white">Register</a>
+                            <a href="{% url 'products' %}?category=mens_wetsuits,womens_wetsuits,kids_wetsuits" class="text-white">Wetsuits</a>
                         </li>
                         <li class="useful-link text-center">
-                            <a class="text-white">All Products</a>
+                            <a href="{% url 'products' %}" class="text-white">All Products</a>
                         </li>
                     </ul>
                 </div>

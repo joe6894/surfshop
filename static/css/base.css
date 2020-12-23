@@ -204,6 +204,18 @@ body {
     width: 100%;
 }
 
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: #111111;
+    color: #fafafa;
+    border: solid #fafafa 1px;
+    border-radius: 5px;
+}
+
 .btn-black {
     background: black;
     color: white;

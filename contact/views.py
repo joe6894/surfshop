@@ -44,12 +44,7 @@ def contact(request):
 
     else:
         if request.user.is_authenticated:
-            form = ContactForm(
-                initial={
-                    'full_name': request.user.full_name,
-                    'email': request.user.email
-                },
-            )
+            form = ContactForm()
         else:
             form = ContactForm()
 
