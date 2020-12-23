@@ -27,7 +27,7 @@ SECRET_KEY = 'a0x_#n6q*@8s-fpavyie!wtc@650$e5d$-dwnybajpv3u^qh--'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['joe6894-surfshop-herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['joe6894-surfshop.herokuapp.com', 'localhost']
 
 
 # Application definition
