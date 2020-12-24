@@ -5,12 +5,13 @@
     <section class="heading-padding">
         <div class="row hero-image-area">
             <div class="col-12 hero-image-area">
-                <img src="/media/surfing-background-image.jpg" class="hero-image" alt="hero-image">
-                <div class="shop-now-area">
-                    <h1 class="text-center">View all our Products</h1>
-                    <h4 class="shop-now-btn-area">
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-3 text-uppercase">Shop Now</a>
-                    </h4>
+                <div class="hero-image">
+                    <div class="shop-now-area">
+                        <h1 class="text-center">View all our Products</h1>
+                        <h4 class="shop-now-btn-area">
+                            <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-3 text-uppercase">Shop Now</a>
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,20 +90,32 @@
         </div>
         <div class="container-fluid row mb-5 mt-4">
             <div class="col-lg-3 col-md-6 brand-area">
-                <img src="/media/billabong.jpg" class="brand-img mb-4" alt="">
-                <a href="{% url 'billabong' %}" class="brand-btn text-white text-center p-1 mb-4">View Products</a>
+                <a href="{% url 'billabong' %}">
+                    <div class="brand-img-billabong mb-4">
+
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 brand-area">
-                <img src="/media/animal.jpg" class="brand-img mb-4" alt="">
-                <a href="{% url 'animal' %}" class="brand-btn text-white text-center p-1 mb-4">View Products</a>
+                <a href="{% url 'animal' %}">
+                    <div class="brand-img-animal mb-4">
+
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 brand-area">
-                <img src="/media/o'neill.jpg" class="brand-img mb-4" alt="">
-                <a href="{% url 'oneill' %}" class="brand-btn text-white text-center p-1 mb-4">View Products</a>
+                <a href="{% url 'oneill' %}">
+                    <div class="brand-img-oneill mb-4">
+
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 brand-area">
-                <img src="/media/gul.jpg" class="brand-img mb-4" alt="">
-                <a href="{% url 'gul' %}" class="brand-btn text-white text-center p-1 mb-4">View Products</a>
+                <a href="{% url 'gul' %}">
+                    <div class="brand-img-gul mb-4">
+
+                    </div>
+                </a>
             </div>
         </div>
     </section>
