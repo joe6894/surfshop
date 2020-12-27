@@ -238,15 +238,27 @@ body {
 .size-chart-mens {
     background-image: url("/media/Mens-Wetsuit-SizeChart_1.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     height: 400px;
 }
 
 .size-chart-kids {
     background-image: url("/media/kids-wetsuit-chart.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     height: 400px;
+}
+
+.size-chart-womens {
+    background-image: url("/media/oneill-womens-wetsuit-size-chart.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+}
+
+.contact-form {
+    width: 60%;
+    margin: auto;
 }
 
 .contact-btn {
@@ -552,6 +564,10 @@ input[name='q']::placeholder {
 
     .bag-heading {
         padding-top: 145px;
+    }
+
+    .contact-form {
+        width: 90%;
     }
 }
 
