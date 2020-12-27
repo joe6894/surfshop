@@ -114,6 +114,7 @@ body {
 .brand-img-billabong {
     background-image: url("/media/billabong.jpg");
     background-repeat: no-repeat;
+    transition: transform 0.2s;
     height: 225px;
     width: 225px;
     display: flex;
@@ -125,6 +126,7 @@ body {
 .brand-img-animal {
     background-image: url("/media/animal.jpg");
     background-repeat: no-repeat;
+    transition: transform 0.2s;
     height: 225px;
     width: 225px;
     display: flex;
@@ -136,6 +138,7 @@ body {
 .brand-img-oneill {
     background-image: url("/media/o'neill.jpg");
     background-repeat: no-repeat;
+    transition: transform 0.2s;
     height: 225px;
     width: 225px;
     display: flex;
@@ -147,12 +150,26 @@ body {
 .brand-img-gul {
     background-image: url("/media/gul.jpg");
     background-repeat: no-repeat;
+    transition: transform 0.2s;
     height: 225px;
     width: 225px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+}
+
+.brand-button {
+    display: none;
+}
+
+.brand-img-billabong:hover,
+.brand-img-animal:hover,
+.brand-img-gul:hover,
+.brand-img-oneill:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
 }
 
 .parallax2 {
