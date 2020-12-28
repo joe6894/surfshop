@@ -12,10 +12,10 @@
     <div class="container product-detail-area">
         <div class="row mt-4">
             <div class="col-lg-3 col-md-3" id="samples">
-                <img id="zoom1" height="300px" width="150px" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="{{ product.image.url }}">
+                <img id="zoom1" height="300" width="150" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="{{ product.image.url }}" alt="Product Image">
             </div>
             <div class="col-lg-3 col-md-3 preview">
-                <img id="preview" onmousemove="zoomIn(event)">
+                <img id="preview" onmousemove="zoomIn(event)" alt="Zoomed Image">
             </div>
             <div class="col-lg-6 product-details-container mb-5">
                 <p class="mb-0"><h4 class="text-white">{{ product.name }}</h4></p>
@@ -107,7 +107,7 @@
             <div class="col-12">
                 <div id="accordion">
                     <div class="card size-chart">
-                        <div class="card-header" data-toggle="collapse" id="headingOne" aria-controls="collapseOne" data-target="#collapseOne" aria-expanded="true">
+                        <div class="card-header" data-toggle="collapse" id="headingOne" aria-controls="collapseOne" data-target="#collapseOne" aria-expanded="true" role="size-chart">
                             <h5 class="mb-0 d-flex justify-content-center">
                                 <button class="btn btn-link text-white"  aria-expanded="true">
                                 Mens Wetsuits Size Chart
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header size-chart" data-toggle="collapse" id="headingTwo" aria-controls="collapseTwo" data-target="#collapseTwo" aria-expanded="true">
+                        <div class="card-header size-chart" data-toggle="collapse" id="headingTwo" aria-controls="collapseTwo" data-target="#collapseTwo" aria-expanded="true" role="size-chart">
                             <h5 class="mb-0 d-flex justify-content-center">
                                 <button class="btn btn-link text-white"  aria-expanded="true">
                                 Womens Wetsuit Size Chart
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header size-chart" data-toggle="collapse" id="headingThree" aria-controls="collapseThree" data-target="#collapseThree" aria-expanded="true">
+                        <div class="card-header size-chart" data-toggle="collapse" id="headingThree" aria-controls="collapseThree" data-target="#collapseThree" aria-expanded="true" role="size-chart">
                             <h5 class="mb-0 d-flex justify-content-center">
                                 <button class="btn btn-link text-white"  aria-expanded="true">
                                 Kid's Wetsuit Size Chart

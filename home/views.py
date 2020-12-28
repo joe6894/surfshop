@@ -3,6 +3,7 @@ from products.models import Product
 
 # Create your views here.
 
+
 def index(request):
     """ A view to return the index page """
 
@@ -14,6 +15,7 @@ def index(request):
 
     return render(request, 'home/index.html', context)
 
+
 def billabong(request):
 
     products = Product.objects.filter(brand='Billabong')
@@ -23,6 +25,7 @@ def billabong(request):
     }
 
     return render(request, 'products/products.html', context)
+
 
 def animal(request):
 
@@ -34,6 +37,7 @@ def animal(request):
 
     return render(request, 'products/products.html', context)
 
+
 def oneill(request):
 
     products = Product.objects.filter(brand="O'neill")
@@ -44,6 +48,7 @@ def oneill(request):
 
     return render(request, 'products/products.html', context)
 
+
 def gul(request):
 
     products = Product.objects.filter(brand='Gul')
@@ -53,5 +58,3 @@ def gul(request):
     }
 
     return render(request, 'products/products.html', context)
-
-

@@ -39,7 +39,9 @@ def contact(request):
             [ADMINS_EMAIL],
             fail_silently=False
         )
-        messages.success(request, 'Your email has been submitted. Our team will get back to you as soon as possible.')
+        messages.success(
+            request, 'Your email has been submitted. Our team will get back to \
+                you as soon as possible.')
         return redirect('contact')
 
     else:
