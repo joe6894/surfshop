@@ -628,6 +628,6 @@ input[name='q']::placeholder {
     }
 
     .preview {
-        display: hidden;
+        display: none;
     }
 }

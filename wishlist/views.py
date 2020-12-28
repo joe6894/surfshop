@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
 from products.models import Product
 from .models import UserWishlist
 from profiles.models import UserProfile
@@ -26,7 +25,8 @@ def add_wish(request, product_id):
 
     wish = get_object_or_404(Product, pk=product_id)
     user = UserProfile.objects.get(user=request.user)
-    wishlist_user, created = UserWishlist.objects.get_or_create(user_profile=user)
+    wishlist_user, created = UserWishlist.objects.\
+        get_or_create(user_profile=user)
     wishlist = Product.objects.filter(userwishlists__user_profile=user)
 
     if created:
@@ -41,4 +41,3 @@ def add_wish(request, product_id):
             messages.info(request, "Successfully added to your wishlist")
 
     return redirect(reverse('wishlist'))
-
