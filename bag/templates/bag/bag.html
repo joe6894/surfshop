@@ -24,7 +24,6 @@
                                     <th scope="col" class="text-white">Subtotal</th>
                                 </tr>
                             </thead>
-
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -128,7 +127,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
