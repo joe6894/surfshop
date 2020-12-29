@@ -16,7 +16,7 @@ class Order(models.Model):
         UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
         related_name='orders'
             )
-    full_name = models.TextField(max_length=50, null=False, blank=False)
+    full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.IntegerField(null=False, blank=False)
     country = CountryField(blank_label='Country *', null=False, blank=False)

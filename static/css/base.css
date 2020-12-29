@@ -594,6 +594,17 @@ input[name='q']::placeholder {
     .nav-link {
         padding: 0;
     }
+
+    .bag-img {
+        height: 20vh;
+        width: 10vh;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .edit-bag {
+        font-size: 60%;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -627,6 +638,10 @@ input[name='q']::placeholder {
 
     .preview {
         padding: 0;
+    }
+
+    .table-img {
+        padding: 0 !important;
     }
 }
 

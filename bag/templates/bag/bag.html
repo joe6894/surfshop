@@ -26,9 +26,9 @@
                             </thead>
                             {% for item in bag_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
+                                    <td class="p-3 w-25 table-img">
                                         {% if item.product.image %}
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        <img class="img-fluid bag-img rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                         {% else %}
                                         <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                                         {% endif %}
@@ -71,8 +71,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-black"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="update-link text-black"><small class="edit-bag">Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small class="edit-bag">Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0 text-white">${{ item.product.price | calc_subtotal:item.quantity }}</p>
