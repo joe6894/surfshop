@@ -6,6 +6,10 @@ from .forms import ContactForm
 from .models import Contact
 
 ADMINS_EMAIL = os.environ.get('ADMINS_EMAIL')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+
+print(ADMINS_EMAIL)
+print(EMAIL_HOST_USER)
 
 
 def contact(request):
@@ -36,9 +40,11 @@ def contact(request):
             'Hello!',
             'You have a new message. See admin for more details',
             os.environ.get('EMAIL_HOST_USER'),
-            [ADMINS_EMAIL],
+            ['ADMINS_EMAIL'],
             fail_silently=False
         )
+        print(ADMINS_EMAIL)
+        print(EMAIL_HOST_USER)
         messages.success(
             request, 'Your email has been submitted. Our team will get back to \
                 you as soon as possible.')
