@@ -19,7 +19,7 @@
                 <h2 class="bag-heading text-white border-bottom text-center mt-4 mb-4">Contact Us</h2>
             </div>
         </div>
-        <form class="text-white contact-form" onsubmit="return sendMail(this);" method="POST">
+        <form id="contact-form" class="text-white contact-form" onsubmit="return sendMail(this);" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 {{ form|crispy }}
@@ -40,13 +40,19 @@
         })
         .then(
             function(response) {
-                console.log("SUCCESS", response);
+                alert("Email sent!");
             },
             function(error) {
-                console.log("FAILED", error);
+                alert("Email failed to send!")
             }
         );
+        resetForm()
         return false;
+    }
+</script>
+<script>
+    function resetForm() {
+        document.getElementById('contact-form').reset();
     }
 </script>
 {% endblock %}
