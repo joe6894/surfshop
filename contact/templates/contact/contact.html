@@ -19,7 +19,7 @@
                 <h2 class="bag-heading text-white border-bottom text-center mt-4 mb-4">Contact Us</h2>
             </div>
         </div>
-        <form class="text-white contact-form" action="{% url 'contact' %}" onsubmit="return sendMail(this);" method="POST">
+        <form class="text-white contact-form" onsubmit="return sendMail(this);" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 {{ form|crispy }}
@@ -45,7 +45,8 @@
             function(error) {
                 console.log("FAILED", error);
             }
-        )
+        );
+        return false;
     }
 </script>
 {% endblock %}
