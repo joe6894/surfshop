@@ -35,7 +35,7 @@ def contact(request):
         send_mail(
             'Hello!',
             'You have a new message. See admin for more details',
-            os.environ.get('SITE_EMAIL'),
+            os.environ.get('EMAIL_HOST_USER'),
             [ADMINS_EMAIL],
             fail_silently=False
         )

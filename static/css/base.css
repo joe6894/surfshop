@@ -223,13 +223,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 #samples{
 	text-align: center;
 }
+
 #samples img {	
 	margin: 10px;
 	border: 2px solid #6A6462;
 }
+
 #samples img:hover {
 	 cursor: zoom-in;
 	 border: 0;
@@ -294,6 +297,7 @@ body {
     background: black;
     color: white;
 }
+
 
 .btn-outline-black {
     background: white;
@@ -586,6 +590,10 @@ input[name='q']::placeholder {
     .contact-form {
         width: 90%;
     }
+
+    .nav-link {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -629,5 +637,11 @@ input[name='q']::placeholder {
 
     .preview {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .navbar {
+        padding: 0;
     }
 }
