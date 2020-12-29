@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_js %}
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_TDWed5l3M6nG5eJfLuM9S");
+    })();
+    </script>
+{% endblock %}
+
 {% block content %}
     <div class="container mb-2">
         <div class="row">
@@ -8,7 +19,7 @@
                 <h2 class="bag-heading text-white border-bottom text-center mt-4 mb-4">Contact Us</h2>
             </div>
         </div>
-        <form class="text-white contact-form" action="{% url 'contact' %}" method="POST">
+        <form class="text-white contact-form" action="{% url 'contact' %}" onsubmit="return sendMail(this);" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 {{ form|crispy }}
@@ -16,4 +27,25 @@
             <input type="submit" value="Submit" class="contact-btn p-2">
         </form>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script>
+    function sendMail(contactForm) {
+        emailjs.send("service_jf9igmh", "Surfshop", {
+            "from_name": contactForm.full_name.value,
+            "subject": contactForm.subject.value,
+            "from_email": contactForm.email.value,
+            "message": contactForm.message.value
+        })
+        .then(
+            function(response) {
+                console.log("SUCCESS", response);
+            },
+            function(error) {
+                console.log("FAILED", error);
+            }
+        )
+    }
+</script>
 {% endblock %}
