@@ -1,6 +1,17 @@
 # Surfshop
 Surfshop is an online store where users can buy water sports clothing and equipment. There is many online stores that provide users with the opportunity to buy water sports clothing or equipment but there is very few where users can buy both in one place. Surfshop also provides store admins with the ability to add, edit  and delete products with ease.
 
+My hosted project is [here](https://joe6894-surfshop.herokuapp.com/)
+A [link](https://joe6894-surfshop.herokuapp.com/admin/) to admin.
+
+## Table of Contents
+1. [UX](https://github.com/joe6894/surfshop/blob/master/README.md#UX)
+2. [Features](https://github.com/joe6894/surfshop/blob/master/README.md#Features)
+3. [Technologies](https://github.com/joe6894/surfshop/blob/master/README.md#Technologies)
+4. [Testing](https://github.com/joe6894/surfshop/blob/master/README.md#Testing)
+5. [Deployment](https://github.com/joe6894/surfshop/blob/master/README.md#Deployment)
+6. [Credits](https://github.com/joe6894/surfshop/blob/master/README.md#Credits)
+
 ## UX
 ### User Goals
 The majority of user will into the following two categories:
@@ -62,7 +73,7 @@ I made some changes from the initial design, they are:
 * Weather app: Would inform users on what conditions are like for surfing and other sport activities
 * Rating: Would give users the ability to rate products.
 
-## Technologies Used
+## Technologies
  
  * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 	 * The project uses html5 to provide structure and content to the site.
@@ -94,7 +105,7 @@ I made some changes from the initial design, they are:
 	* Used to send emails on the site.
 
 ## Testing
-### Browser
+### Browser Compatibility 
 I tested the website on three different browsers to see if the application works and looks like it should.
 | Browser               | Microsoft Edge | Google Chrome | Firefox |
 |-----------------------|----------------|---------------|---------|
@@ -112,7 +123,7 @@ I tested the website on three different browsers to see if the application works
 | login.html            | pass           | pass          | pass    |
 | register.html         | pass           | pass          | pass    |
 
-### Device Sizes
+### Responsiveness 
 To test the site on different devices I used all the sizes on google developer tools to test its appearance and its responsiveness.
 
 | Device            | index.html | products.html | product_detail.html | add_product.html | edit_product.html | bag.html | checkout.html | checkout_success.html | profile.html | wishlist.html | logout.html | login.html | register.html |
@@ -338,7 +349,7 @@ To deploy this page to heroku the following steps were taken.
 7. Go to the Deploy  tab and select Heroku Git.
 8. In your IDE of choice use the command  git push heroku master.
 
-To deploy this site locally:
+To clone this site locally:
 1. Under the repository name, click "Clone or download".
 2. In the Clone with HTTPs section, copy the clone URL for the repository.
 3. Open your IDE of choice.
