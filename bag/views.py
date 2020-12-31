@@ -7,11 +7,6 @@ from products.models import Product
 # Create your views here.
 
 
-def error_404(request, exception):
-    data = {}
-    return render(request, 'surfshop/404.html', data)
-
-
 def view_bag(request):
     """ A view that renders the bag contents page """
 
