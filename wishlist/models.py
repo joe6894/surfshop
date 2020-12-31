@@ -3,6 +3,7 @@ from products.models import Product
 from profiles.models import UserProfile
 
 
+# Models for wishlist
 class UserWishlist(models.Model):
     user_profile = models.OneToOneField(
         UserProfile, on_delete=models.CASCADE, null=False, blank=False)

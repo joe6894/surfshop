@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <!-- products heading with padding -->
     <div class="container-fluid products-heading-padding">
         <div class="row">
             <div class="col text-center mt-3">
@@ -18,6 +19,7 @@
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
+                            <!-- dropdown sort filter -->
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -41,6 +43,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- for loop for prpducts -->
                     {% for product in products  %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
@@ -117,12 +120,14 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- script for back to top button -->
     <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
+    <!--- script for sorting filters -->
     <script>
         $('#sort-selector').change(function() {
             var selector = $(this);

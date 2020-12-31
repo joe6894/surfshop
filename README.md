@@ -143,6 +143,7 @@ To test the site on different devices I used all the sizes on google developer t
 
 ### Online Validation
 #### CSS3
+I used [w3.org](https://jigsaw.w3.org/css-validator/) for validation
 | File         | Valid |
 |--------------|-------|
 | base.css     | pass  |
@@ -150,12 +151,14 @@ To test the site on different devices I used all the sizes on google developer t
 | profiles.css | pass  |
 
 #### Javascript 
+I used [JSHint](https://jshint.com/) for validation
 | File              | Valid |
 |-------------------|-------|
 | CountryField.js   | pass  |
 | stripe_element.js | pass  |
 
 #### HTML5
+I used [w3.org](https://validator.w3.org/) for validation
 | File                  | Valid |
 |-----------------------|-------|
 | index.html            | pass  |
@@ -173,7 +176,7 @@ To test the site on different devices I used all the sizes on google developer t
 | register.html         | pass  |
 
 #### Python
-
+I used [PEP8](http://pep8online.com/) for validation
 | App         | Bag  |
 |-------------|------|
 | contexts.py | pass |
@@ -357,6 +360,7 @@ To clone this site locally:
 5. Type git clone, and then paste the URL you copied in Step 2.
 6. Press Enter. Your local clone will be created.
 7. In environment settings you will need to add the environment variables from step 3 in deploying to heroku.
+8. Use 'python3 manage.py makemigrations' to migrate all the models. 
 
 ## Credits
 ### Content

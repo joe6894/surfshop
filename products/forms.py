@@ -3,6 +3,7 @@ from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
 
+# form for admins to add products
 class ProductForm(forms.ModelForm):
 
     class Meta:

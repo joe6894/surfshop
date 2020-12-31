@@ -3,6 +3,7 @@
 {% load bag_tools %}
 
 {% block content %}
+    <!-- Page heading with padding-->
     <div class="container mb-2">
         <div class="row">
             <div class="col">
@@ -12,6 +13,7 @@
 
         <div class="row">
             <div class="col">
+                <!-- table to display items in bag and to display the cost of items in bag-->
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -127,6 +129,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
+<!-- scripts to update items in bag and remove item from bag -->
 <script>
     // Update quantity on click
     $('.update-link').click(function(e) {

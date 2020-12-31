@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+    <!-- heading with padding -->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -15,12 +16,14 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-white">Default Delivery Information</p>
+                <!-- form for user to update delivery info -->
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
             </div>
+            <!-- order history section -->
             <div class="col-12 col-lg-6">
                 <p class="text-white">Order History</p>
                 <div class="order-history table-responsive">

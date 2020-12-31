@@ -16,6 +16,7 @@ import stripe
 import json
 
 
+# A view that handles the cached checkout data
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -33,6 +34,7 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+# view for checkout page, handles the payments
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -146,6 +148,7 @@ def checkout(request):
     return render(request, template, context)
 
 
+# A view that takes user to to checkout success and save delivery info
 def checkout_success(request, order_number):
     """
     Handle successful checkouts

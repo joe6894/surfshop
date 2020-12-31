@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block extra_js %}
+    <!-- script to send emails -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
@@ -13,12 +14,14 @@
 {% endblock %}
 
 {% block content %}
+    <!-- page heading with padding -->
     <div class="container mb-2">
         <div class="row">
             <div class="col">
                 <h2 class="bag-heading text-white border-bottom text-center mt-4 mb-4">Contact Us</h2>
             </div>
         </div>
+        <!-- contact form -->
         <form id="contact-form" class="text-white contact-form" onsubmit="return sendMail(this);" method="POST">
             {% csrf_token %}
             <div class="form-group">

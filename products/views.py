@@ -10,6 +10,7 @@ from .forms import ProductForm
 # Create your views here.
 
 
+# view to load all products
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -62,6 +63,7 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+# view for product details page
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
@@ -74,6 +76,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+# A view for admin to add products
 @login_required
 def add_product(request):
     """ Add a product to the store """
@@ -102,6 +105,7 @@ def add_product(request):
     return render(request, template, context)
 
 
+# A view to edit products for admin
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -133,6 +137,7 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+# view for admin to delete products
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """

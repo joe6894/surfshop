@@ -8,6 +8,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+# A view to load profile page with profile data filled out
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -35,6 +36,7 @@ def profile(request):
     return render(request, template, context)
 
 
+# A view for order history
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 

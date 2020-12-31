@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+# contact form model
 class Contact(models.Model):
     full_name = models.CharField(max_length=254)
     subject = models.CharField(max_length=254)

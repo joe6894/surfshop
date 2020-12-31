@@ -6,6 +6,7 @@ from .models import UserWishlist
 from profiles.models import UserProfile
 
 
+# view to load wishlist
 @login_required
 def view_wishlist(request):
     """ A view to return the wishlist """
@@ -17,6 +18,7 @@ def view_wishlist(request):
     return render(request, 'wishlist/wishlist.html', context)
 
 
+# A view that allows users to add to their wishlist
 @login_required
 def add_wish(request, product_id):
     """

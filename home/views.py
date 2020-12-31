@@ -4,6 +4,7 @@ from products.models import Product
 # Create your views here.
 
 
+# View for home page
 def index(request):
     """ A view to return the index page """
 
@@ -16,6 +17,7 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 
+# View to load all billabong products
 def billabong(request):
 
     products = Product.objects.filter(brand='Billabong')
@@ -27,6 +29,7 @@ def billabong(request):
     return render(request, 'products/products.html', context)
 
 
+# View to load all animal products
 def animal(request):
 
     products = Product.objects.filter(brand='Animal')
@@ -38,6 +41,7 @@ def animal(request):
     return render(request, 'products/products.html', context)
 
 
+# view to load o'neill products
 def oneill(request):
 
     products = Product.objects.filter(brand="O'neill")
@@ -49,6 +53,7 @@ def oneill(request):
     return render(request, 'products/products.html', context)
 
 
+# view to load all gul products
 def gul(request):
 
     products = Product.objects.filter(brand='Gul')

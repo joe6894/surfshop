@@ -4,15 +4,15 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
 
-
+# view to view items in the bag
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/bag.html')
 
 
+# A view to add items to bag
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
@@ -52,6 +52,7 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
+# A view to edit the items in the bag
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
@@ -87,6 +88,7 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
+# A view to remove items from the bag
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 

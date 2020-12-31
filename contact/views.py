@@ -5,6 +5,7 @@ from .forms import ContactForm
 from .models import Contact
 
 
+# contact view for sending emails
 def contact(request):
     if request.method == 'POST':
         if request.user.is_authenticated:
